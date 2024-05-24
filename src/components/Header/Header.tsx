@@ -2,8 +2,6 @@ import { Container } from './styles'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
-// import resumePDF from './assets/resume.pdf';
-
 export function Header() {
   const [isActive, setActive] = useState(false)
   function toggleTheme() {
@@ -17,8 +15,9 @@ export function Header() {
     <Container className="header-fixed">
       <Router>
         <HashLink smooth to="#home" className="logo">
-          <span>{"<Vinayak "}</span>
-          <span>{" Singh/>"}</span>
+          <span>{"< N "}</span>
+          <span style={{color:'#23ce6b'}}>{" J"}</span>
+          <span>{" >"}</span>
         </HashLink>
         <input
           onChange={toggleTheme}
@@ -41,7 +40,7 @@ export function Header() {
           <NavHashLink smooth to="#contact" onClick={closeMenu}>
             Contact
           </NavHashLink>
-          <a href='{resumePDF}' download className="button">
+          <a href='' download className="button">
             Resume
           </a>
         </nav>
